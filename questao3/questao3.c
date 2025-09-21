@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 void entregar_cedulas(int valor) {
-    // Verifica se o valor não pode ser pago exatamente
+   
     if (valor < 2) {
         printf("Valor não pode ser pago exatamente com as cédulas disponíveis.\n");
         return;
     }
 
-    // Cédulas disponíveis
+    
     int cedulas_100 = 0, cedulas_50 = 0, cedulas_20 = 0, cedulas_10 = 0;
     int cedulas_5 = 0, cedulas_2 = 0;
 
-    // Calculando quantas cédulas de cada valor serão entregues
+  
     if (valor >= 100) {
         cedulas_100 = valor / 100;
         valor = valor % 100;
@@ -37,13 +37,13 @@ void entregar_cedulas(int valor) {
         valor = valor % 2;
     }
 
-    // Se restar algum valor que não pode ser pago (1 real)
+    
     if (valor > 0) {
         printf("Valor não pode ser pago exatamente com as cédulas disponíveis.\n");
         return;
     }
 
-    // Exibe o resultado
+    
     printf("Cédulas entregues:\n");
     if (cedulas_100 > 0) printf("Cédulas de 100: %d\n", cedulas_100);
     if (cedulas_50 > 0) printf("Cédulas de 50: %d\n", cedulas_50);
@@ -56,12 +56,12 @@ void entregar_cedulas(int valor) {
 int main() {
     int valor;
 
-    // Solicita o valor ao usuário
+   
     printf("Digite o valor para saque: ");
     scanf("%d", &valor);
 
-    // Chama a função para calcular e entregar as cédulas
     entregar_cedulas(valor);
 
     return 0;
 }
+
