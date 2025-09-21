@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 void calcular_imc(float peso, float altura) {
-    // Cálculo do IMC
+   
     float imc = peso / (altura * altura);
     
-    // Exibe o IMC
+   
     printf("Seu IMC é: %.2f\n", imc);
     
-    // Classificação do IMC
+   
     if (imc < 18.5) {
         printf("Você está na categoria: Abaixo do peso\n");
     } else if (imc >= 18.5 && imc <= 24.9) {
@@ -26,15 +26,16 @@ void calcular_imc(float peso, float altura) {
 int main() {
     float peso, altura;
 
-    // Solicitar dados ao usuário
+  
     printf("Digite seu peso em kg: ");
     scanf("%f", &peso);
 
     printf("Digite sua altura em metros: ");
     scanf("%f", &altura);
 
-    // Chama a função para calcular o IMC e exibir a categoria
+   
     calcular_imc(peso, altura);
 
     return 0;
 }
+
