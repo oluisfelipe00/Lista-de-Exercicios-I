@@ -6,12 +6,10 @@ void entregar_cedulas(int valor) {
         printf("Valor não pode ser pago exatamente com as cédulas disponíveis.\n");
         return;
     }
-
     
     int cedulas_100 = 0, cedulas_50 = 0, cedulas_20 = 0, cedulas_10 = 0;
     int cedulas_5 = 0, cedulas_2 = 0;
 
-  
     if (valor >= 100) {
         cedulas_100 = valor / 100;
         valor = valor % 100;
@@ -37,13 +35,11 @@ void entregar_cedulas(int valor) {
         valor = valor % 2;
     }
 
-    
     if (valor > 0) {
         printf("Valor não pode ser pago exatamente com as cédulas disponíveis.\n");
         return;
     }
 
-    
     printf("Cédulas entregues:\n");
     if (cedulas_100 > 0) printf("Cédulas de 100: %d\n", cedulas_100);
     if (cedulas_50 > 0) printf("Cédulas de 50: %d\n", cedulas_50);
@@ -55,7 +51,6 @@ void entregar_cedulas(int valor) {
 
 int main() {
     int valor;
-
    
     printf("Digite o valor para saque: ");
     scanf("%d", &valor);
@@ -64,4 +59,5 @@ int main() {
 
     return 0;
 }
+
 
